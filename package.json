@@ -4,7 +4,10 @@
   "description": "This is the new P0keM0n version reworked for Angular",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mocha": "node node_modules/mocha/bin/mocha",
+    "tsc": "node node_modules/typescript/bin/tsc",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/poupounetjoyeux/AngularTp/issues"
   },
-  "homepage": "https://github.com/poupounetjoyeux/AngularTp#readme"
+  "homepage": "https://github.com/poupounetjoyeux/AngularTp#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  }
 }

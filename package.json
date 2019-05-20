@@ -4,10 +4,12 @@
   "description": "This is the new P0keM0n version reworked for Angular",
   "main": "index.js",
   "scripts": {
-    "mocha": "node node_modules/mocha/bin/mocha",
-    "tsc": "node node_modules/typescript/bin/tsc",
-    "test": "mocha -r ts-node/register src/**/*.spec.ts",
-    "build": "tsc"
+    "jest": "node node_modules/jest/bin/jest",
+    "tsc": "node node_modules/tsc/bin/tsc",
+    "ts-node": "node node_modules/ts-node/bin/ts-node",
+    "test": "jest",
+    "build": "tsc",
+    "start": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -20,10 +22,9 @@
   },
   "homepage": "https://github.com/poupounetjoyeux/AngularTp#readme",
   "devDependencies": {
-    "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.6",
-    "chai": "^4.2.0",
-    "mocha": "^6.1.4",
+    "@types/jest": "^24.0.13",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.5"
   }
